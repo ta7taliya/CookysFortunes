@@ -6,7 +6,7 @@
 <title>Cooky's Fortunes — subversive divination from Aunty Cooky</title>
 <meta name="description" content="Subversive divination from Aunty Cooky. Some fortune telling sees your future. This Aunty tells you the truth about the present." />
 <meta property="og:title" content="Cooky's Fortunes" />
-<meta property="og:description" content="Subversive divination from Aunty Cooky. Crack one open." />
+<meta property="og:description" content="Subversive divination from Aunty Cooky. Pull a fortune." />
 <meta name="theme-color" content="#151020" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Sora:wght@300;400;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
@@ -243,7 +243,7 @@
     </div>
 
     <!-- Orb -->
-    <button id="orb" class="orb-btn" aria-label="Crack open a fortune">
+    <button id="orb" class="orb-btn" aria-label="Pull a fortune">
       <div class="orb-glow" aria-hidden="true"></div>
       <svg class="orb-svg" viewBox="0 0 200 200">
         <defs>
@@ -257,12 +257,12 @@
         <g class="orb-rings" id="orbRings"></g>
         <ellipse cx="72" cy="62" rx="26" ry="14" fill="white" opacity="0.07" transform="rotate(-24 72 62)"/>
       </svg>
-      <span id="orbLabel" class="orb-label">crack one open</span>
+      <span id="orbLabel" class="orb-label">pull a fortune</span>
     </button>
 
     <!-- Incantation / result zone -->
     <div id="resultZone" class="result-zone">
-      <p class="idle-hint">Hold your question in your mind — or type it above — then crack the coil open.</p>
+      <p class="idle-hint">Hold your question in your mind — or type it above — then pull a fortune from the coil.</p>
     </div>
   </section>
 
@@ -279,7 +279,7 @@
         </button>
       </div>
       <div id="archiveBody">
-        <p class="archive-empty">No fortunes cracked yet. Crack one open and your teachings will collect here for this sitting.</p>
+        <p class="archive-empty">No fortunes pulled yet. Pull one and your teachings will collect here for this sitting.</p>
       </div>
     </aside>
 
@@ -425,8 +425,8 @@ function consult() {
     const entry = drawWisdom();
     phase = "revealed";
     orb.classList.remove("is-loading");
-    orb.setAttribute("aria-label", "Crack open a fortune");
-    orbLabel.textContent = "crack another";
+    orb.setAttribute("aria-label", "Pull a fortune");
+    orbLabel.textContent = "pull another";
     resultZone.replaceChildren(buildCard(entry, q));
     const time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
     archive.unshift({ entry, time });
@@ -477,7 +477,7 @@ function buildCard(entry, q) {
 
 function renderArchive() {
   if (archive.length === 0) {
-    archiveBody.innerHTML = '<p class="archive-empty">No fortunes cracked yet. Crack one open and your teachings will collect here for this sitting.</p>';
+    archiveBody.innerHTML = '<p class="archive-empty">No fortunes pulled yet. Pull one and your teachings will collect here for this sitting.</p>';
     archiveClear.classList.remove("show");
     return;
   }
