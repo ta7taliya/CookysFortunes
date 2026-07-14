@@ -4,7 +4,7 @@
 
 Some fortune telling sees your future. This Aunty tells you the truth about the present — and lets the future take care of itself.
 
-Crack one open: **[ta7taliya.github.io/CookysFortunes](https://ta7taliya.github.io/CookysFortunes/)**
+Pull a fortune: **[ta7taliya.github.io/CookysFortunes](https://ta7taliya.github.io/CookysFortunes/)**
 
 ---
 
